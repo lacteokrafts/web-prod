@@ -6,7 +6,7 @@ export default function Home() {
           Welcome to LacteoKrafts
         </h1>
         <p className="text-xl text-[#8B6F47] leading-relaxed">
-          Crafted with care and passion
+          Krishnendu Malik ekta gay chele
         </p>
       </div>
     </div>
