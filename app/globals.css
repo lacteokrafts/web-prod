@@ -10,3 +10,91 @@ body {
   padding: 0;
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Bird Flying Animations kichu issue ache*/
+@keyframes flyBird1 {
+  0% {
+    left: -50px;
+    top: 20%;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    left: 110%;
+    top: 30%;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes flyBird2 {
+  0% {
+    left: -50px;
+    top: 60%;
+    transform: rotate(-10deg);
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    left: 110%;
+    top: 50%;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes flyBird3 {
+  0% {
+    left: -50px;
+    top: 45%;
+    transform: rotate(5deg);
+  }
+  50% {
+    top: 25%;
+  }
+  100% {
+    left: 110%;
+    top: 40%;
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes flyBird4 {
+  0% {
+    left: -50px;
+    top: 70%;
+    transform: rotate(-15deg);
+  }
+  50% {
+    top: 55%;
+  }
+  100% {
+    left: 110%;
+    top: 65%;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes flapWings {
+  0%, 100% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(60deg);
+  }
+}
+
+.bird-flap .wing-left,
+.bird-flap .wing-right {
+  animation: flapWings 0.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.bird-flap .wing-left {
+  animation-delay: 0s;
+}
+
+.bird-flap .wing-right {
+  animation-delay: 0.3s;
+}
