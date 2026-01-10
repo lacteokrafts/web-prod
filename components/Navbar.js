@@ -1,11 +1,12 @@
 'use client'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
+  const pathname = usePathname()
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#D4C4A8] border-b border-[#B8A888] shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
@@ -23,37 +24,57 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link 
-              href="/" 
-              className="text-[#3D2E1F] hover:text-[#5C4A3A] transition-colors font-medium"
-            >
-              Home
-            </Link>
-            <Link 
-              href="/about" 
-              className="text-[#3D2E1F] hover:text-[#5C4A3A] transition-colors font-medium"
-            >
-              About
-            </Link>
-            <Link 
-              href="/vision" 
-              className="text-[#3D2E1F] hover:text-[#5C4A3A] transition-colors font-medium"
-            >
-              Vision
-            </Link>
-            <Link 
-              href="/products" 
-              className="text-[#3D2E1F] hover:text-[#5C4A3A] transition-colors font-medium"
-            >
-              Products
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-[#3D2E1F] hover:text-[#5C4A3A] transition-colors font-medium"
-            >
-              Contact
-            </Link>
-          </div>
+          <Link 
+            href="/" 
+            className={`transition-colors font-medium ${
+              pathname === '/' 
+                ? 'text-[#8B1538] font-bold border-b-2 border-[#8B1538]' 
+                : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
+            }`}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/about" 
+            className={`transition-colors font-medium ${
+              pathname === '/about' 
+                ? 'text-[#8B1538] font-bold border-b-2 border-[#8B1538]' 
+                : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
+            }`}
+          >
+            About
+          </Link>
+          <Link 
+            href="/vision" 
+            className={`transition-colors font-medium ${
+              pathname === '/vision' 
+                ? 'text-[#8B1538] font-bold border-b-2 border-[#8B1538]' 
+                : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
+            }`}
+          >
+            Vision
+          </Link>
+          <Link 
+            href="/products" 
+            className={`transition-colors font-medium ${
+              pathname === '/products' 
+                ? 'text-[#8B1538] font-bold border-b-2 border-[#8B1538]' 
+                : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
+            }`}
+          >
+            Products
+          </Link>
+          <Link 
+            href="/contact" 
+            className={`transition-colors font-medium ${
+              pathname === '/contact' 
+                ? 'text-[#8B1538] font-bold border-b-2 border-[#8B1538]' 
+                : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
+            }`}
+          >
+            Contact
+          </Link>
+        </div>
 
           {/* Mobile Menu Button */}
           <button
