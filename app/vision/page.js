@@ -101,7 +101,7 @@ export default function Vision() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="absolute inset-0 bg-gradient-to-b from-[#8B1538]/90 via-[#8B1538]/80 to-[#5C4A3A]/90"
+            className="absolute inset-0 bg-linear-to-b from-[#8B1538]/90 via-[#8B1538]/80 to-[#5C4A3A]/90"
             style={{
               transform: `translateY(${scrollY * 0.5}px)`
             }}
@@ -186,7 +186,7 @@ export default function Vision() {
       </section>
 
       {/* Vision Segments - Card Style */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FAF8F5] to-white">
+      <section className="py-20 sm:py-28 bg-linear-to-b from-[#FAF8F5] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20">
@@ -210,7 +210,7 @@ export default function Vision() {
                   <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                     {/* Image Side */}
                     <div className="lg:w-1/2 relative overflow-hidden">
-                      <div className="aspect-[4/3] lg:aspect-auto lg:h-full relative">
+                      <div className="aspect-4/3 lg:aspect-auto lg:h-full relative">
                         <Image
                           src={segment.image}
                           alt={segment.title}
@@ -223,7 +223,7 @@ export default function Vision() {
                     </div>
 
                     {/* Content Side */}
-                    <div className="lg:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="lg:w-1/2 p-6 sm:p-8 lg:p-16 flex flex-col justify-center">
                       {/* Number Badge */}
                       <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 ${segment.accentColor} rounded-full mb-6`}>
                         <span className={`text-xl sm:text-2xl font-bold ${segment.bgColor === 'bg-[#8B6F47]' ? 'text-[#5C4A3A]' : segment.textColor === 'text-white' ? 'text-white' : 'text-white'}`}>
@@ -231,11 +231,11 @@ export default function Vision() {
                         </span>
                       </div>
 
-                      <h3 className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${segment.textColor} mb-6 group-hover:tracking-wide transition-all duration-300`}>
+                      <h3 className={`text-2xl sm:text-3xl lg:text-5xl font-bold ${segment.textColor} mb-4 sm:mb-6 group-hover:tracking-wide transition-all duration-300`}>
                         {segment.title}
                       </h3>
                       
-                      <p className={`text-base sm:text-lg lg:text-xl ${segment.textColor} opacity-80 leading-relaxed mb-6`}>
+                      <p className={`text-sm sm:text-base lg:text-xl ${segment.textColor} opacity-80 leading-relaxed mb-4 sm:mb-6`}>
                         {segment.description}
                       </p>
 
@@ -256,7 +256,7 @@ export default function Vision() {
         onMouseMove={handleCtaMouseMove}
       >
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8B1538] via-[#6B0F2A] to-[#5C4A3A]">
+        <div className="absolute inset-0 bg-linear-to-br from-[#8B1538] via-[#6B0F2A] to-[#5C4A3A]">
           <div 
             className="absolute inset-0 opacity-10"
             style={{
