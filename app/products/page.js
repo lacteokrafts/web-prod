@@ -6,12 +6,53 @@ import Image from 'next/image'
 export default function Products() {
   const [scrollY, setScrollY] = useState(0)
   const [activeFilter, setActiveFilter] = useState('All')
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mouseTrail, setMouseTrail] = useState([])
+  const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    
+    // Check if desktop
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024)
+    }
+    checkDesktop()
+    window.addEventListener('resize', checkDesktop)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', checkDesktop)
+    }
   }, [])
+
+  useEffect(() => {
+    if (!isDesktop) return
+
+    const handleMouseMove = (e) => {
+      const newPos = { x: e.clientX, y: e.clientY, id: Date.now() }
+      setMousePosition(newPos)
+      
+      // Add to trail
+      setMouseTrail(prev => {
+        const updated = [...prev, newPos].slice(-15) // Keep last 15 positions
+        return updated
+      })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    
+    // Clean up old trail positions
+    const interval = setInterval(() => {
+      setMouseTrail(prev => prev.filter(pos => Date.now() - pos.id < 2000))
+    }, 100)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      clearInterval(interval)
+    }
+  }, [isDesktop])
 
   const allProducts = [
     { name: "customized1", image: "/products/customized1.png", category: "Customized", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
@@ -38,8 +79,88 @@ export default function Products() {
 
   return (
     <div className="min-h-screen -mt-20">
-      {/* Hero Section with Birds */}
+      {/* Hero Section with Birds and Water Flow Effect */}
       <section className="bg-[#8B1538] text-white relative overflow-hidden">
+        {/* Water Flow Effect - Desktop Only */}
+        {isDesktop && (
+          <>
+            {/* Flowing ripples from mouse trail */}
+            {mouseTrail.map((pos, index) => {
+              const age = Date.now() - pos.id
+              const opacity = Math.max(0, 1 - age / 2000)
+              const scale = 1 + (age / 2000) * 3
+              
+              return (
+                <div
+                  key={pos.id}
+                  className="absolute pointer-events-none"
+                  style={{
+                    left: pos.x,
+                    top: pos.y,
+                    transform: `translate(-50%, -50%) scale(${scale})`,
+                    opacity: opacity * 0.3,
+                    transition: 'all 0.1s ease-out'
+                  }}
+                >
+                  <div
+                    className="w-40 h-40 rounded-full border-2 border-[#D4C4A8]"
+                    style={{
+                      animation: 'pulse 1s ease-out forwards'
+                    }}
+                  />
+                </div>
+              )
+            })}
+
+            {/* Main flowing gradient */}
+            <div 
+              className="absolute inset-0 pointer-events-none z-1 transition-all duration-300 ease-out"
+              style={{
+                background: `
+                  radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, 
+                    rgba(212, 196, 168, 0.15), 
+                    transparent 30%),
+                  radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, 
+                    rgba(255, 255, 255, 0.08), 
+                    transparent 50%)
+                `
+              }}
+            />
+
+            {/* Animated wave distortion */}
+            <div 
+              className="absolute pointer-events-none z-1"
+              style={{
+                left: mousePosition.x - 300,
+                top: mousePosition.y - 300,
+                width: '600px',
+                height: '600px',
+                background: `radial-gradient(circle, rgba(139, 111, 71, 0.3) 0%, transparent 60%)`,
+                filter: 'blur(60px)',
+                transform: 'translate(0, 0)',
+                transition: 'left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                animation: 'wave 3s ease-in-out infinite'
+              }}
+            />
+
+            {/* Secondary wave */}
+            <div 
+              className="absolute pointer-events-none z-1"
+              style={{
+                left: mousePosition.x - 200,
+                top: mousePosition.y - 200,
+                width: '400px',
+                height: '400px',
+                background: `radial-gradient(circle, rgba(212, 196, 168, 0.2) 0%, transparent 70%)`,
+                filter: 'blur(40px)',
+                transform: 'translate(0, 0)',
+                transition: 'left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                animation: 'wave 4s ease-in-out infinite reverse'
+              }}
+            />
+          </>
+        )}
+
         {/* Flying Birds */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           {/* Bird 1 */}
@@ -172,6 +293,16 @@ export default function Products() {
             transform: `translateY(-${scrollY * 0.03}px) rotate(-${scrollY * 0.02}deg)`
           }}
         />
+
+        {/* Add wave animation keyframes */}
+        <style jsx>{`
+          @keyframes wave {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(20px, -20px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.9); }
+            75% { transform: translate(20px, 20px) scale(1.05); }
+          }
+        `}</style>
       </section>
 
       {/* Filter Section */}
