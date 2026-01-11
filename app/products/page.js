@@ -17,7 +17,7 @@ export default function Products() {
       id: 0,
       title: "Our Products",
       description: "Discover our exquisite collection of handcrafted treasures. Each piece tells a story of passion, tradition, and timeless elegance. Explore the finest craftsmanship curated just for you.",
-      bgColor: "bg-[#8B1538]",
+      bgImage: "/tree_red_bg.png",
       textColor: "text-white",
       accentColor: "bg-[#D4C4A8]",
       isIntro: true,
@@ -32,7 +32,7 @@ export default function Products() {
       accentColor: "bg-[#8B1538]",
       items: [
         { name: "Ja khushi naam", image: "/a.png", desc: "Give description" },
-        { name: "Ja khushi naam", image: "/vercel.svg", desc: "Give description" }
+        { name: "Ja khushi naam", image: "/a.png", desc: "Give description" }
       ]
     },
     {
@@ -91,7 +91,13 @@ export default function Products() {
         return (
           <section 
             key={section.id}
-            className={`${section.bgColor} ${section.textColor} relative overflow-hidden`}
+            className={`${section.bgColor || ''} ${section.textColor} relative overflow-hidden`}
+            style={section.bgImage ? {
+              backgroundImage: `url(${section.bgImage})`,
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            } : {}}
           >
             {/* Flying Birds - Only in intro section */}
             {section.isIntro && (
@@ -103,7 +109,7 @@ export default function Products() {
                     animation: 'flyBird1 15s linear infinite',
                   }}
                 >
-                  <svg width="40" height="40" viewBox="0 0 50 50" className="bird-flap">
+                  <svg width="60" height="60" viewBox="0 0 50 50" className="bird-flap">
                     <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.8" className="wing-left"/>
                     <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.9"/>
                     <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.8" className="wing-right"/>
@@ -118,7 +124,7 @@ export default function Products() {
                     animationDelay: '3s'
                   }}
                 >
-                  <svg width="35" height="35" viewBox="0 0 50 50" className="bird-flap">
+                  <svg width="55" height="55" viewBox="0 0 50 50" className="bird-flap">
                     <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.7" className="wing-left"/>
                     <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.8"/>
                     <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.7" className="wing-right"/>
@@ -133,7 +139,7 @@ export default function Products() {
                     animationDelay: '7s'
                   }}
                 >
-                  <svg width="38" height="38" viewBox="0 0 50 50" className="bird-flap">
+                  <svg width="58" height="58" viewBox="0 0 50 50" className="bird-flap">
                     <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.75" className="wing-left"/>
                     <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.85"/>
                     <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.75" className="wing-right"/>
@@ -148,71 +154,39 @@ export default function Products() {
                     animationDelay: '10s'
                   }}
                 >
-                  <svg width="32" height="32" viewBox="0 0 50 50" className="bird-flap">
+                  <svg width="52" height="52" viewBox="0 0 50 50" className="bird-flap">
                     <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.65" className="wing-left"/>
                     <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.75"/>
                     <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.65" className="wing-right"/>
                   </svg>
                 </div>
-                {/* Bird 5 */}
-                    <div 
-                    className="absolute"
-                    style={{
-                        animation: 'flyBird1 17s linear infinite',
-                        animationDelay: '5s'
-                    }}
-                    >
-                    <svg width="36" height="36" viewBox="0 0 50 50" className="bird-flap">
-                        <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.7" className="wing-left"/>
-                        <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.8"/>
-                        <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.7" className="wing-right"/>
-                    </svg>
-                    </div>
-
-                    {/* Bird 6 */}
-                    <div 
-                    className="absolute"
-                    style={{
-                        animation: 'flyBird2 23s linear infinite',
-                        animationDelay: '11s'
-                    }}
-                    >
-                    <svg width="34" height="34" viewBox="0 0 50 50" className="bird-flap">
-                        <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.6" className="wing-left"/>
-                        <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.7"/>
-                        <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.6" className="wing-right"/>
-                    </svg>
-                    </div>
-
-                    {/* Bird 7 */}
-                    <div 
-                    className="absolute"
-                    style={{
-                        animation: 'flyBird3 19s linear infinite',
-                        animationDelay: '14s'
-                    }}
-                    >
-                    <svg width="37" height="37" viewBox="0 0 50 50" className="bird-flap">
-                        <path d="M25 15 Q15 10, 10 15 Q15 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.75" className="wing-left"/>
-                        <ellipse cx="25" cy="20" rx="3" ry="5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.85"/>
-                        <path d="M25 15 Q35 10, 40 15 Q35 12, 25 15 Z" fill="none" stroke="white" strokeWidth="1.5" opacity="0.75" className="wing-right"/>
-                    </svg>
-                    </div>
               </div>
             )}
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 relative z-10">
-              {/* Header */}
-              <div 
-                className={`${section.isIntro ? 'text-center min-h-[60vh] flex flex-col justify-center' : 'text-left'} mb-10 sm:mb-14`}
-              >
-                <h2 className={`${section.isIntro ? 'text-5xl sm:text-6xl lg:text-7xl' : 'text-4xl sm:text-5xl lg:text-6xl'} font-bold mb-6 transform transition-all duration-700 ${!section.isIntro && 'hover:translate-x-2'}`}>
-                  {section.title}
-                </h2>
-                <p className={`text-base sm:text-lg lg:text-xl opacity-90 ${section.isIntro ? 'max-w-4xl mx-auto leading-relaxed' : 'max-w-3xl'}`}>
-                  {section.description}
-                </p>
-              </div>
+              {/* Header - Intro Section */}
+              {section.isIntro ? (
+                <div className="min-h-[80vh] flex items-center">
+                  {/* Text Only - Left Aligned */}
+                  <div className="flex-1 text-left lg:pl-4">
+                    <h2 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 lg:mb-8">
+                      {section.title}
+                    </h2>
+                    <p className="text-lg sm:text-xl lg:text-2xl opacity-95 leading-relaxed max-w-2xl">
+                      {section.description}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-left mb-10 sm:mb-14">
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 transform transition-all duration-700 hover:translate-x-2">
+                    {section.title}
+                  </h2>
+                  <p className="text-base sm:text-lg lg:text-xl opacity-90 max-w-3xl">
+                    {section.description}
+                  </p>
+                </div>
+              )}
 
               {/* Products Grid - Only show if not intro section */}
               {!section.isIntro && (

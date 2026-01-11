@@ -76,7 +76,7 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl w-full">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#5C4A3A] mb-4 sm:mb-6 text-center">
-            Section 2
+            What We do
           </h2>
           <p className="text-base sm:text-lg text-[#8B6F47] leading-relaxed text-center px-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -88,7 +88,7 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl w-full">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#5C4A3A] mb-4 sm:mb-6 text-center">
-            Section 3
+            Why LacteoKrafts
           </h2>
           <p className="text-base sm:text-lg text-[#8B6F47] leading-relaxed text-center px-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

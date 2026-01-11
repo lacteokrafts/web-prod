@@ -52,7 +52,7 @@ export default function Navbar() {
                 : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
             }`}
           >
-            Vision
+            Application
           </Link>
           <Link 
             href="/products" 
