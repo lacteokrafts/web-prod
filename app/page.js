@@ -49,7 +49,7 @@ export default function Home() {
         style={{ backgroundImage: "url('/a.png')" }}
       >
         {/* Elegant gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/40 to-black/60" />
         
         {/* Animated grain texture */}
         <div 
@@ -86,12 +86,12 @@ export default function Home() {
 
           {/* Decorative divider */}
           <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-white/40 to-transparent w-32" />
+            <div className="h-px bg-linear-to-r from-transparent via-white/40 to-transparent w-32" />
             <div className="mx-4 relative">
               <div className="w-2 h-2 bg-white/60 rounded-full" />
               <div className="absolute inset-0 w-2 h-2 bg-white/30 rounded-full animate-ping" />
             </div>
-            <div className="h-px bg-gradient-to-r from-transparent via-white/40 to-transparent w-32" />
+            <div className="h-px bg-linear-to-r from-transparent via-white/40 to-transparent w-32" />
           </div>
           
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed px-4 mb-12 font-light max-w-2xl mx-auto"
@@ -111,7 +111,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538] to-[#6D1029] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute inset-0 bg-linear-to-r from-[#8B1538] to-[#6D1029] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white transition-opacity duration-500 z-20">
                 Explore Our Catalogue
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,12 +145,12 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-white to-[#FAF8F5]" id="why" data-animate>
+      <section className="py-20 sm:py-28 bg-linear-to-b from-white to-[#FAF8F5]" id="why" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <span className="text-sm font-semibold text-[#8B1538] tracking-widest uppercase">Why Choose Us</span>
-              <div className="h-px bg-gradient-to-r from-transparent via-[#8B1538] to-transparent mt-2" />
+              <div className="h-px bg-linear-to-r from-transparent via-[#8B1538] to-transparent mt-2" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-[#5C4A3A] mb-6">
               Crafted with Purpose
@@ -185,7 +185,7 @@ export default function Home() {
                   animation: isVisible['why'] ? `fadeInUp 0.8s ease-out ${index * 0.2}s backwards` : 'none'
                 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#8B1538] to-[#6D1029] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                <div className="w-16 h-16 bg-linear-to-br from-[#8B1538] to-[#6D1029] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
                   </svg>
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <span className="text-sm font-semibold text-[#8B1538] tracking-widest uppercase">Collections</span>
-              <div className="h-px bg-gradient-to-r from-transparent via-[#8B1538] to-transparent mt-2" />
+              <div className="h-px bg-linear-to-r from-transparent via-[#8B1538] to-transparent mt-2" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-[#5C4A3A] mb-6">
               Discover Our Craft
@@ -234,7 +234,7 @@ export default function Home() {
                   height={400}
                   className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
                   <h3 className="text-3xl font-bold mb-2">{collection.title}</h3>
                   <p className="text-white/90 mb-4">{collection.desc}</p>
@@ -261,7 +261,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-28 bg-gradient-to-br from-[#8B1538] via-[#9B2548] to-[#7D1230] text-white relative overflow-hidden">
+      <section className="py-20 sm:py-28 bg-linear-to-br from-[#8B1538] via-[#9B2548] to-[#7D1230] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div 
             className="absolute inset-0"
