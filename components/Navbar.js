@@ -55,6 +55,16 @@ export default function Navbar() {
             Vision
           </Link>
           <Link 
+            href="/materials" 
+            className={`transition-colors font-medium ${
+              pathname === '/materials' 
+                ? 'text-[#8B1538] font-bold border-b-2 border-[#8B1538]' 
+                : 'text-[#3D2E1F] hover:text-[#5C4A3A]'
+            }`}
+          >
+            Materials
+          </Link>
+          <Link 
             href="/products" 
             className={`transition-colors font-medium ${
               pathname === '/products' 
@@ -123,6 +133,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Vision
+            </Link>
+            <Link 
+              href="/materials" 
+              className="block text-[#3D2E1F] hover:text-[#5C4A3A] transition-colors font-medium py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Materials
             </Link>
             <Link 
               href="/products" 
