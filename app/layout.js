@@ -28,9 +28,11 @@ export const metadata = {
   keywords: [
     "Lacteokrafts",
     "Lacteo Krafts",
+    "Lacteo Kraft",
     "lacteokrafts",
     "lactocraft",
     "lactokraft",
+    "lacto craft",
     "jwelery",
     "handcrafted ornaments",
     "handmade gifts",
