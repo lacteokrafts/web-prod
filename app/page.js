@@ -217,7 +217,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {[
-              { title: "Artisan Collection", desc: "Handcrafted treasures with timeless appeal", image: "/products/pendant4.png" },
+              { title: "Artisan Collection", desc: "Handcrafted treasures with timeless appeal", image: "/products/pendent4.png" },
               { title: "Modern Fusion", desc: "Contemporary elegance meets traditional craft", image: "/earings6.png" }
             ].map((collection, index) => (
               <div
