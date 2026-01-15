@@ -30,6 +30,7 @@ export const metadata = {
     "Lacteo Krafts",
     "lacteokrafts",
     "lactocraft",
+    "lactokraft",
     "jwelery",
     "handcrafted ornaments",
     "handmade gifts",
