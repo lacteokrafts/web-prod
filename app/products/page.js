@@ -54,22 +54,22 @@ export default function Products() {
     }
   }, [isDesktop])
 
-  const allProducts = [
-    { name: "customized1", image: "/products/customized1.png", category: "Customized", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "customized2", image: "/products/customized2.png", category: "Customized", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "earings1", image: "/products/earings1.png", category: "Earrings", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "earings2", image: "/products/earings2.png", category: "Earrings", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "earings3", image: "/products/earings3.png", category: "Earrings", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "earings4", image: "/products/earings4.png", category: "Earrings", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "earings5", image: "/products/earings5.png", category: "Earrings", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "memntos1", image: "/products/memntos1.png", category: "Mementos", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "memntos2", image: "/products/memntos2.png", category: "Mementos", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "memntos3", image: "/products/memntos3.png", category: "Mementos", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "pendent1", image: "/products/pendent1.png", category: "Pendants", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "pendent2", image: "/products/pendent2.png", category: "Pendants", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "pendent3", image: "/products/pendent3.png", category: "Pendants", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." },
-    { name: "toys", image: "/products/toys.png", category: "Toys", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore." }
-  ]
+ const allProducts = [
+  { name: "Customized 1", image: "/products/customized1.png", category: "Customized", desc: "" },
+  { name: "Customized 2", image: "/products/customized2.png", category: "Customized", desc: "" },
+  { name: "Earrings 1", image: "/products/earings1.png", category: "Earrings", desc: "" },
+  { name: "Earrings 2", image: "/products/earings2.png", category: "Earrings", desc: "" },
+  { name: "Earrings 3", image: "/products/earings3.png", category: "Earrings", desc: "" },
+  { name: "Earrings 4", image: "/products/earings4.png", category: "Earrings", desc: "" },
+  { name: "Earrings 5", image: "/products/earings5.png", category: "Earrings", desc: "" },
+  { name: "Mementos 1", image: "/products/memntos1.png", category: "Mementos", desc: "" },
+  { name: "Mementos 2", image: "/products/memntos2.png", category: "Mementos", desc: "" },
+  { name: "Mementos 3", image: "/products/memntos3.png", category: "Mementos", desc: "" },
+  { name: "Pendant 1", image: "/products/pendent1.png", category: "Pendants", desc: "" },
+  { name: "Pendant 2", image: "/products/pendent2.png", category: "Pendants", desc: "" },
+  { name: "Pendant 3", image: "/products/pendent3.png", category: "Pendants", desc: "" },
+  { name: "Toys", image: "/products/toys.png", category: "Toys", desc: "" }
+]
 
   const categories = ['All', 'Earrings', 'Mementos', 'Pendants', 'Toys', 'Customized']
 
