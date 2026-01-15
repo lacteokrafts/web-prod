@@ -14,7 +14,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image 
-              src="/vercel.svg" 
+              src="logo/logo.png" 
               alt="LacteoKrafts Logo" 
               width={100} 
               height={25}

@@ -55,7 +55,7 @@ export default function Vision() {
     {
       title: "Personal Gifting",
       description: "Every gift tells a story. Our handcrafted pieces are designed to capture moments of love, celebration, and connection. From birthdays to weddings, anniversaries to milestones, we create treasures that speak from the heart and last a lifetime.",
-      image: "/a.png",
+      image: "vision/personal_gifting.png",
       bgColor: "bg-white",
       textColor: "text-[#5C4A3A]",
       accentColor: "bg-[#8B1538]"
@@ -63,7 +63,7 @@ export default function Vision() {
     {
       title: "Academic Events",
       description: "Celebrating excellence and achievement with elegance. Our custom-designed mementos honor academic milestones, convocations, and institutional legacies. Each piece reflects the prestige and tradition of educational excellence, crafted to inspire future generations.",
-      image: "/a.png",
+      image: "vision/academic.png",
       bgColor: "bg-[#FAF8F5]",
       textColor: "text-[#5C4A3A]",
       accentColor: "bg-[#8B6F47]"
@@ -71,7 +71,7 @@ export default function Vision() {
     {
       title: "Exhibitions & Shows",
       description: "Artistry that captivates and inspires. Our exhibition pieces blend traditional craftsmanship with contemporary design, creating focal points that draw attention and spark conversation. Perfect for galleries, cultural events, and creative showcases.",
-      image: "/a.png",
+      image: "vision/exhibitions.png",
       bgColor: "bg-white",
       textColor: "text-[#5C4A3A]",
       accentColor: "bg-[#D4C4A8]"
@@ -79,7 +79,7 @@ export default function Vision() {
     {
       title: "Corporate Mementos",
       description: "Elevate your brand with sophistication. Our corporate collections transform recognition into art. From executive gifts to employee appreciation, client tokens to milestone celebrations, we craft pieces that embody professionalism and lasting value.",
-      image: "/a.png",
+      image: "vision/corporate.png",
       bgColor: "bg-[#8B6F47]",
       textColor: "text-white",
       accentColor: "bg-[#FAF8F5]"
@@ -87,7 +87,7 @@ export default function Vision() {
     {
       title: "Home Decor",
       description: "Transform spaces into sanctuaries. Our home décor collection brings warmth, character, and timeless elegance to every room. Each handcrafted piece is designed to complement your lifestyle while adding a touch of artisanal beauty to your living spaces.",
-      image: "/a.png",
+      image: "vision/home.png",
       bgColor: "bg-[#D4C4A8]",
       textColor: "text-[#3D2E1F]",
       accentColor: "bg-[#8B1538]"

@@ -161,7 +161,7 @@ export default function About() {
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl group">
                 <div className="absolute inset-0 bg-linear-to-br from-[#8B1538]/10 to-transparent z-10" />
                 <Image
-                  src="/a.png"
+                  src="about/ab1.png"
                   alt="Crafting Process"
                   width={600}
                   height={600}
@@ -242,7 +242,7 @@ export default function About() {
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl group">
                 <div className="absolute inset-0 bg-linear-to-br from-[#8B6F47]/10 to-transparent z-10" />
                 <Image
-                  src="/a.png"
+                  src="about/ab2.png"
                   alt="Our Products"
                   width={600}
                   height={600}
@@ -331,7 +331,7 @@ export default function About() {
             >
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl group">
                 <Image
-                  src="/a.png"
+                  src="about/ab3.png"
                   alt="Community Events"
                   width={700}
                   height={400}

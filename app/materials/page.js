@@ -65,7 +65,7 @@ export default function Materials() {
               <div className="absolute -inset-6 bg-[#C9A66B]/20 rounded-[2.5rem] blur-3xl"></div>
               <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-[#D4C4A8]/50 hover:ring-[#C9A66B]/60 transition-all duration-500">
                 <Image 
-                  src="/a.png" 
+                  src="material/magg.png" 
                   alt="Material texture showcasing natural origins" 
                   width={600}
                   height={750}
@@ -240,7 +240,7 @@ export default function Materials() {
               <div className="absolute -inset-6 bg-[#C9A66B]/20 rounded-[2.5rem] blur-3xl"></div>
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-[#C9A66B]/50 hover:ring-[#8B6F47]/60 transition-all duration-500">
                 <Image 
-                  src="/a.png" 
+                  src="material/mat2.png" 
                   alt="Collection of finished pieces" 
                   width={600}
                   height={600}
@@ -291,33 +291,7 @@ export default function Materials() {
         </div>
       </section>
 
-      {/* Material Showcase Gallery */}
-      <section className="py-16 md:py-20 lg:py-28 bg-[#F9F6F1]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <div className="inline-block mb-4 bg-[#8B1538]/10 backdrop-blur-sm border border-[#8B1538]/20 rounded-full px-4 py-2 shadow-sm">
-              <span className="text-sm font-medium text-[#8B1538] tracking-wider uppercase">Gallery</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2E1F] tracking-tight">
-              Material Showcase
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="group relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ring-2 ring-[#D4C4A8]/30 hover:ring-[#C9A66B]/50">
-                <Image 
-                  src="/a.png" 
-                  alt={`Material showcase ${item}`}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-linear-from-transparent to-[#3D2E1F]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* CTA Section */}
       <section className="py-20 md:py-24 lg:py-32 bg-[#3D2E1F] relative overflow-hidden">

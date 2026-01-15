@@ -217,8 +217,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {[
-              { title: "Artisan Collection", desc: "Handcrafted treasures with timeless appeal" },
-              { title: "Modern Fusion", desc: "Contemporary elegance meets traditional craft" }
+              { title: "Artisan Collection", desc: "Handcrafted treasures with timeless appeal", image: "/products/pendent4.png" },
+              { title: "Modern Fusion", desc: "Contemporary elegance meets traditional craft", image: "/earings6.png" }
             ].map((collection, index) => (
               <div
                 key={index}
@@ -228,11 +228,11 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/a.png"
+                  src={collection.image}
                   alt={collection.title}
                   width={600}
                   height={400}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover w-full h-full group-hover:scale-110 transit  ion-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
