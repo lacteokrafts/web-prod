@@ -18,15 +18,19 @@ export const metadata = {
 
   title: {
     default:
-      "Lacteo Krafts | Handcrafted Ornaments & Gifts from Milk-Derived Materials",
-    template: "%s | Lacteo Krafts",
+      "Lacteokrafts (Lacteo Krafts) | Handcrafted Ornaments & Gifts from Milk-Derived Materials",
+    template: "%s | Lacteokrafts",
   },
 
   description:
-    "Lacteo Krafts creates handcrafted ornaments, gifts, and accessories using a unique milk-derived biobased material — blending thoughtful design, craftsmanship, and sustainability.",
+    "Lacteokrafts (Lacteo Krafts) creates handcrafted ornaments, gifts, and accessories using a unique milk-derived biobased material — blending thoughtful design, craftsmanship, and sustainability.",
 
   keywords: [
+    "Lacteokrafts",
     "Lacteo Krafts",
+    "lacteokrafts",
+    "lactocraft",
+    "jwelery",
     "handcrafted ornaments",
     "handmade gifts",
     "handmade jewelry",
@@ -38,11 +42,11 @@ export const metadata = {
 
   openGraph: {
     title:
-      "Lacteo Krafts | Handcrafted Ornaments & Gifts from Milk-Derived Materials",
+      "Lacteokrafts | Handcrafted Ornaments & Gifts from Milk-Derived Materials",
     description:
-      "Thoughtfully crafted ornaments, gifts, and accessories made from a unique milk-derived biobased material.",
+      "Lacteokrafts - Thoughtfully crafted ornaments, gifts, and accessories made from a unique milk-derived biobased material.",
     url: "https://lacteokrafts.com",
-    siteName: "Lacteo Krafts",
+    siteName: "Lacteokrafts",
     type: "website",
     locale: "en_IN",
   },
